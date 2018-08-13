@@ -26,7 +26,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <items>
                                             <navigationItem title="Title" id="cp7-TK-xgd">
-                                                <barButtonItem key="rightBarButtonItem" systemItem="add" id="AYU-FD-Wjb"/>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="add" id="AYU-FD-Wjb">
+                                                    <connections>
+                                                        <action selector="addButtonTapped:" destination="BYZ-38-t0r" id="Bq4-uv-wuM"/>
+                                                    </connections>
+                                                </barButtonItem>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
@@ -34,7 +38,7 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="603"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="QI6-nL-sRr" customClass="CustomCell" customModule="CustomTableCell" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="QI6-nL-sRr" customClass="CustomCell" customModule="CustomTableCell">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QI6-nL-sRr" id="nnr-OP-geK" customClass="UITableViewCell" customModule="CustomTableCell" customModuleProvider="target">
@@ -42,20 +46,20 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zDj-i3-s3a">
-                                                            <rect key="frame" x="0.0" y="0.0" width="415" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8S-h3-run" userLabel="View1">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="124.5" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="43.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw7-rQ-xUL">
-                                                                    <rect key="frame" x="124.5" y="0.0" width="166" height="43.5"/>
+                                                                    <rect key="frame" x="112.5" y="0.0" width="150" height="43.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QpO-tQ-wn7" userLabel="View2">
-                                                                    <rect key="frame" x="290.5" y="0.0" width="124.5" height="43.5"/>
+                                                                    <rect key="frame" x="262.5" y="0.0" width="112.5" height="43.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
                                                             </subviews>

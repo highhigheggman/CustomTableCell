@@ -13,6 +13,41 @@ class ViewController: UIViewController {
     @IBOutlet weak var navigation: UINavigationBar!
     @IBOutlet weak var addButton: UINavigationItem!
     
+    @IBAction func addButtonTapped(_ sender: UIButton) {
+        let controller = UIAlertController(title: "Name",
+                                           message: nil,
+                                           preferredStyle: .alert)
+        
+        // OK Button
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler:{
+            (action: UIAlertAction!) -> Void in
+            let textFields:Array<UITextField>? =  controller.textFields as Array<UITextField>?
+            
+            if textFields != nil {
+                for textField:UITextField in textFields! {
+                    self.data.append(textField.text!)
+                }
+            }
+            
+        })
+        
+        // Cancel Button
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel, handler:{
+            (action: UIAlertAction!) -> Void in
+        })
+        
+        // add Button Action
+        controller.addAction(cancelAction)
+        controller.addAction(defaultAction)
+        
+        // add textfiled
+        controller.addTextField(configurationHandler: {(text:UITextField!) -> Void in
+        })
+        
+        // Display Alert
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     var data = ["Taro", "Jiro", "Saburo"]
     
     override func viewDidLoad() {
