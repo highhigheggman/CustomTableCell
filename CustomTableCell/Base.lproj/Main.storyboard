@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,25 +47,15 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zDj-i3-s3a">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8S-h3-run" userLabel="View1">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="43.5"/>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw7-rQ-xUL">
-                                                                    <rect key="frame" x="112.5" y="0.0" width="150" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QpO-tQ-wn7" userLabel="View2">
-                                                                    <rect key="frame" x="262.5" y="0.0" width="112.5" height="43.5"/>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </view>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="T8S-h3-run" firstAttribute="height" secondItem="zDj-i3-s3a" secondAttribute="height" id="2z4-tM-4nb"/>
-                                                                <constraint firstItem="uw7-rQ-xUL" firstAttribute="width" secondItem="zDj-i3-s3a" secondAttribute="width" multiplier="0.4" id="B92-du-5AT"/>
-                                                                <constraint firstItem="T8S-h3-run" firstAttribute="width" secondItem="zDj-i3-s3a" secondAttribute="width" multiplier="0.3" id="JaB-cB-sSk"/>
+                                                                <constraint firstItem="uw7-rQ-xUL" firstAttribute="width" secondItem="zDj-i3-s3a" secondAttribute="width" id="B92-du-5AT"/>
                                                                 <constraint firstItem="uw7-rQ-xUL" firstAttribute="height" secondItem="zDj-i3-s3a" secondAttribute="height" id="tz8-iM-eiT"/>
                                                             </constraints>
                                                         </stackView>
