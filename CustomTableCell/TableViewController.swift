@@ -37,8 +37,6 @@ class ViewController: UIViewController {
                     // Animation color : initial val = blue
                     theCell.backgroundColor = UIColor.blue
                     
-                    // Animation color : initial val = blue
-                    theCell.backgroundColor = UIColor.blue
                     
                     UIView.animate(withDuration: 1.5, delay: 0.0, options: [], animations: {
                         self.Table.beginUpdates()
