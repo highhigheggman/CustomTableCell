@@ -29,22 +29,50 @@ class ViewController: UIViewController {
             if textFields != nil {
                 for textField:UITextField in textFields! {
                     self.data.append(textField.text!)
-                    
+                    print(self.data.count - 1)
                     self.cellClose.append(self.data.count - 1)
                     self.Table.insertRows(at: [IndexPath(row: self.data.count - 1, section: 0)], with: .left)
                     let theCell = self.Table.cellForRow(at: IndexPath(row: self.data.count - 1, section: 0)) as! CustomCell
-
-                    UIView.animate(withDuration: 0.75) {
-                        theCell.backgroundColor = UIColor.blue
+                    
+                    // Animation color : initial val = blue
+                    theCell.backgroundColor = UIColor.blue
+                    
+                    // Animation color : initial val = blue
+                    theCell.backgroundColor = UIColor.blue
+                    
+                    UIView.animate(withDuration: 1.5, delay: 0.0, options: [], animations: {
                         self.Table.beginUpdates()
                         self.cellClose.remove(at: self.cellClose.index(of: self.data.count - 1)!)
                         self.Table.endUpdates()
                         theCell.layoutIfNeeded()
-                    }
+                        
+                    }, completion: { _ in
+                        UIView.animate(withDuration: 2.5, delay: 1.0, options: [], animations: {
+                            theCell.backgroundColor = UIColor.white
+                            
+                        }, completion: nil)
+                    })
                     
-                    UIView.animate(withDuration: 3.0) {
-                        theCell.backgroundColor = UIColor.white
-                    }
+                    
+                    /*
+                     UIView.animateKeyframes(withDuration: 3.0, delay: 0, options: [], animations: {
+                     
+                     UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5, animations: {
+                     self.Table.beginUpdates()
+                     self.cellClose.remove(at: self.cellClose.index(of: self.data.count - 1)!)
+                     self.Table.endUpdates()
+                     theCell.layoutIfNeeded()
+                     })
+                     
+                     
+                     UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
+                     theCell.backgroundColor = UIColor.white
+                     })
+                     
+                     
+                     }, completion: nil)*/
+                    
+                    
                 }
             }
             
@@ -67,7 +95,7 @@ class ViewController: UIViewController {
         self.present(controller, animated: true, completion: nil)
     }
     
-    var data = ["Taro", "Jiro", "Saburo"]
+    var data = ["AAAA", "BBBB", "CCCC"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,12 +104,12 @@ class ViewController: UIViewController {
         Table.dataSource = self
         Table.delegate = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 
@@ -102,7 +130,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
         cell.label.text = data[indexPath.row]
-
+        
         return cell
     }
     
